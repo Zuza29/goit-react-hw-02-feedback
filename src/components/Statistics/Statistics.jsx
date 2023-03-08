@@ -1,36 +1,18 @@
 import React, { Component } from 'react';
+import css from './Statistics.module.css';
 
 export class Statistics extends Component {
-  static defaultProps = {
-    step: 1,
-    initialValue: 0,
-  };
-
-  state = {
-    positive: this.props.initialValue,
-    neutral: this.props.initialValue,
-      negative: this.props.initialValue,
-      total: 0,
-      positiveFeedback: 0,
-    };
-    
-    countTotalFeedback() {
-
-    }
-
-    countPositiveFeedbackPercentage() {
-        
-    }
 
   render() {
+    const { positive, negative, neutral, total, positiveFeedback } = this.props;
     return (
-      <div>
-        <h1>Stats</h1>
-        <p>Positive: {this.state.positive}</p>
-        <p>Neutral: {this.state.neutral}</p>
-            <p>Negative: {this.state.negative}</p>
-            <p>Total: {this.state.total}</p>
-            <p>Positive feedback: {this.state.positiveFeedback}</p>
+      <div className={css.stats}>
+        <h2>Stats</h2>
+        <p>Positive: {positive}</p>
+        <p>Neutral: {neutral}</p>
+            <p>Negative: {negative}</p>
+        <p>Total: {total}</p>
+        <p>Positive feedback: {positiveFeedback}</p>
       </div>
     );
   }
