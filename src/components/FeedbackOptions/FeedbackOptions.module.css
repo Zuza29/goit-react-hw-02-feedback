@@ -1,0 +1,30 @@
+
+h1, p {
+    font-family: 'Shantell Sans', cursive;
+}
+
+h1 {
+    font-size: 3em;
+    line-height: 30px;
+}
+
+p {
+    font-size: 1.5em;
+    margin-bottom: 35px;
+}
+
+button {
+    padding: 15px 40px;
+    margin: 30px 10px;
+    border-radius: 10px;
+    font-family: 'Open Sans', cursive;
+    border: 1px solid white;
+    background-color: rgba(165,42,42);
+    color: white;
+    font-size: 1.2em;
+}
+
+button:hover {
+    background-color: rgba(165,42,42,0.8);
+    cursor: pointer;
+}

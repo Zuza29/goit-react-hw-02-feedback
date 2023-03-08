@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Shantell+Sans:wght@300&display=swap');
+
+.app {
+    margin: 60px;
+    padding: 30px;
+    border: 2px solid black;
+    text-align: center;
+    font-family: 'Open Sans', cursive;
+    border-radius: 8px;
+  background-image: url('../img/background.png');
+    position: relative; 
+      background-size: cover;
+}
+
+
