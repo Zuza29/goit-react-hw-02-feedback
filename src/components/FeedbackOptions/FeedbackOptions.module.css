@@ -1,18 +1,4 @@
 
-h1, p {
-    font-family: 'Shantell Sans', cursive;
-}
-
-h1 {
-    font-size: 3em;
-    line-height: 30px;
-}
-
-p {
-    font-size: 1.5em;
-    margin-bottom: 35px;
-}
-
 button {
     padding: 15px 40px;
     margin: 30px 10px;
