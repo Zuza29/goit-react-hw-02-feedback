@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import {FeedbackOptions} from './FeedbackOptions/FeedbackOptions';
 import { Statistics } from './Statistics/Statistics';
 import { Notification } from './Notification/Notification';
-import css from './App.module.css';
+import { scoreKeys } from 'constants/scoreKeys';
+import { Section } from './Section/Section';
+import PropTypes from 'prop-types';
 
 export class App extends Component {
   state = {
@@ -39,23 +41,36 @@ export class App extends Component {
   render() {
     const { positive, negative, neutral, total } = this.state;
     return (
-      <div className={css.app}>
-        <FeedbackOptions
-          onLeaveFeedback={this.onLeaveFeedback}
+      <div className="App">
+        <Section title="Espresso Coffee">
+          <FeedbackOptions
+            scoreKeys={scoreKeys}
+            onLeaveFeedback={this.onLeaveFeedback}
           />
+        </Section>
+        <Section title="Stats">
           {this.state.total === 0 ? (
             <Notification message="There is no feedback" />
           ) : (
             <Statistics
+              scoreKeys={scoreKeys}
               positive={positive}
               negative={negative}
               neutral={neutral}
               total={total}
               positiveFeedback={this.countPositiveFeedbackPercentage()}
+            
             />
           )}
-        
+        </Section>
       </div>
     );
   }
 }
+
+App.propTypes = {
+  positive: PropTypes.number,
+  negative: PropTypes.number,
+  neutral: PropTypes.number,
+  total: PropTypes.number,
+};
