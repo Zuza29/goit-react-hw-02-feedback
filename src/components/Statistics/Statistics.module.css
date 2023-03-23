@@ -1,14 +1,21 @@
 h2 {
-    font-size: 2em;
+  font-size: 2em;
 }
 
 .stats {
-    display: flex;
-flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
-.stats p {
-        margin: 0;
-    line-height: 45px;
-    font-family: 'Open Sans', cursive;
+.stats p,
+ul {
+  margin: 0;
+  line-height: 45px;
+  font-family: 'Open Sans', cursive;
+  font-size: 1.5em;
+}
+
+.statsList {
+  list-style-type: none;
+  padding: 0;
 }

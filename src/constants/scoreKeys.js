@@ -1,1 +1,0 @@
-export const scoreKeys = ['positive', 'negative', 'neutral'];
